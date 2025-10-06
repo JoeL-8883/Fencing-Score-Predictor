@@ -1,9 +1,7 @@
 # Fencing Score Predictor
 This project served as an exercise to improve my skills in developing neural networks.
 
-The project aimed to forecast fencers' future scores using machine learning. To this end, I created the 'Men's Foil Fencing Points' database, capturing each athlete's competition results. Given the stochastic nature of the sport, I employed a LSTM to autoregressively predict the points earned in the next competitions. Despite extensive experimentation and refinement, the model remained ineffective, outputting often negative predictions. 
+## Data
+Raw data is obtained through the FIE 'General Ranks' sheet which stores the points scored by each athlete in each competition. The general ranks for the 2025/2026 season can be found [here](https://fie.org/athletes/general-ranks/?category=S&ag=-1&weapon=F&gender=M&event=I&season=2026&country=).
 
-Although the model could be improved by using dynamic model adjustments, or by including new features, such improvements may yield inconsequential results. Furthermore, improvements, made on the model are stymied by fencing's lack of popularity, and consequently the lack of data available in the sport. I therefore will stop working on this project to pursue something else.
-
-
-
+The data is transformed into a single Panda dataframe, and additional features such as the athlete's FIE ID and date of birth are scraped from the FIE website, as seen in the `data.ipynb` notebook.
